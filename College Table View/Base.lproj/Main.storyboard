@@ -22,7 +22,7 @@
                                 <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="PlR-eM-x5M" style="IBUITableViewCellStyleDefault" id="gbG-pg-r8W" userLabel="MyCell">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MyCell" textLabel="PlR-eM-x5M" style="IBUITableViewCellStyleDefault" id="gbG-pg-r8W" userLabel="MyCell">
                                         <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gbG-pg-r8W" id="BNv-0q-vGd">
@@ -54,8 +54,15 @@
                             <constraint firstAttribute="trailingMargin" secondItem="Sg5-N5-74Y" secondAttribute="trailing" constant="-20" id="c6M-lM-OKt"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="FAl-ry-RuD"/>
+                    <navigationItem key="navigationItem" id="FAl-ry-RuD">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="q3N-5P-K5W">
+                            <connections>
+                                <action selector="onPlusButtonTapped:" destination="BYZ-38-t0r" id="02b-vw-2rO"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="plusButton" destination="q3N-5P-K5W" id="0x9-kA-4eL"/>
                         <outlet property="tableView" destination="Sg5-N5-74Y" id="cyG-lz-rdN"/>
                     </connections>
                 </viewController>
