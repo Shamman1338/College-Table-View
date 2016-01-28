@@ -32,4 +32,4 @@ class DetailViewController: UIViewController {
         college.state = stateTextField.text!
         college.population = Int(populationTextField.text!)!
     }
-}
+    }
