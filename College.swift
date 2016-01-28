@@ -24,9 +24,13 @@ class College: NSObject
     self.image = image
     
     }
+    
     convenience init(name: String)
+    
     {
+    
     self.init()
     self.name = name
+    
     }
     }

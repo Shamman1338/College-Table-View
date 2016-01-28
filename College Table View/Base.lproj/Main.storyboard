@@ -25,6 +25,10 @@
                             </textField>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wcK-UZ-Vnv">
                                 <rect key="frame" x="180" y="171" width="250" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="PJk-iL-aOI"/>
+                                    <constraint firstAttribute="width" constant="250" id="Z7R-DX-uKO"/>
+                                </constraints>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="State" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jIh-qS-iym">
                                 <rect key="frame" x="252" y="85" width="150" height="30"/>
@@ -47,12 +51,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="hl5-9D-sZt" firstAttribute="centerX" secondItem="kIK-rR-OJf" secondAttribute="centerX" id="3nR-eH-Hmg"/>
-                            <constraint firstItem="941-Pm-qJ0" firstAttribute="centerX" secondItem="kIK-rR-OJf" secondAttribute="centerX" id="4ea-uU-fPx"/>
-                            <constraint firstItem="wcK-UZ-Vnv" firstAttribute="centerX" secondItem="kIK-rR-OJf" secondAttribute="centerX" id="Iaa-GF-3Fw"/>
+                            <constraint firstItem="941-Pm-qJ0" firstAttribute="centerX" secondItem="kIK-rR-OJf" secondAttribute="centerX" id="DEA-Vi-USw"/>
                             <constraint firstItem="jIh-qS-iym" firstAttribute="centerX" secondItem="kIK-rR-OJf" secondAttribute="centerX" id="RxI-sw-uEC"/>
-                            <constraint firstItem="wcK-UZ-Vnv" firstAttribute="centerX" secondItem="kIK-rR-OJf" secondAttribute="centerX" id="YdP-CP-CzE"/>
                             <constraint firstItem="VHD-zv-GiK" firstAttribute="centerX" secondItem="kIK-rR-OJf" secondAttribute="centerX" id="fRN-gH-5FJ"/>
                             <constraint firstItem="VHD-zv-GiK" firstAttribute="centerX" secondItem="kIK-rR-OJf" secondAttribute="centerX" id="tUc-t6-PgT"/>
+                            <constraint firstItem="wcK-UZ-Vnv" firstAttribute="centerX" secondItem="kIK-rR-OJf" secondAttribute="centerX" id="zBp-j5-8nd"/>
                         </constraints>
                     </view>
                     <connections>
@@ -98,6 +101,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="zCS-AT-lBo" kind="show" id="eTt-Pu-l9R"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
