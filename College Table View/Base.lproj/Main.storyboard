@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="6D1-zm-CQJ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="6D1-zm-CQJ">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -60,7 +60,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZfQ-6y-6sC">
-                                <rect key="frame" x="469" y="331" width="48" height="30"/>
+                                <rect key="frame" x="469" y="313" width="48" height="30"/>
                                 <state key="normal" title="Library"/>
                                 <connections>
                                     <action selector="onCameraButtonTapped:" destination="zCS-AT-lBo" eventType="touchUpInside" id="pz2-4j-cJy"/>
@@ -68,10 +68,17 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Vi-AN-YSm">
-                                <rect key="frame" x="466" y="285" width="54" height="30"/>
+                                <rect key="frame" x="466" y="253" width="54" height="30"/>
                                 <state key="normal" title="Camera"/>
                                 <connections>
                                     <action selector="onCameraButtonTapped:" destination="zCS-AT-lBo" eventType="touchUpInside" id="VHJ-Oe-cmY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NRS-L4-l59">
+                                <rect key="frame" x="478" y="373" width="30" height="30"/>
+                                <state key="normal" title="Map"/>
+                                <connections>
+                                    <segue destination="3Yw-tE-zrL" kind="show" id="GmZ-u8-IEY"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -79,6 +86,7 @@
                         <constraints>
                             <constraint firstItem="hl5-9D-sZt" firstAttribute="centerX" secondItem="kIK-rR-OJf" secondAttribute="centerX" id="3nR-eH-Hmg"/>
                             <constraint firstItem="8Vi-AN-YSm" firstAttribute="leading" secondItem="wcK-UZ-Vnv" secondAttribute="trailing" constant="7" id="5Hx-b9-8qF"/>
+                            <constraint firstItem="NRS-L4-l59" firstAttribute="leading" secondItem="wcK-UZ-Vnv" secondAttribute="trailing" constant="26" id="C29-pG-FeW"/>
                             <constraint firstItem="941-Pm-qJ0" firstAttribute="centerX" secondItem="kIK-rR-OJf" secondAttribute="centerX" id="DEA-Vi-USw"/>
                             <constraint firstItem="OW6-V7-g9s" firstAttribute="leading" secondItem="W99-7B-nlt" secondAttribute="trailing" constant="8" id="P7K-l8-ntN"/>
                             <constraint firstItem="jIh-qS-iym" firstAttribute="centerX" secondItem="kIK-rR-OJf" secondAttribute="centerX" id="RxI-sw-uEC"/>
@@ -101,6 +109,45 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Azg-cR-pe2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1387" y="205"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="0T9-CZ-hcB">
+            <objects>
+                <viewController id="3Yw-tE-zrL" customClass="MapViewController" customModule="College_Table_View" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Sxg-Hf-V7N"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ham-Eh-Fap"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ZxW-1Z-ENf">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="0JK-ox-DmL">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                            </mapView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="A9c-yO-9vC">
+                                <rect key="frame" x="240" y="96" width="120" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0JK-ox-DmL" firstAttribute="leading" secondItem="ZxW-1Z-ENf" secondAttribute="leadingMargin" constant="-20" id="RZD-C5-ASB"/>
+                            <constraint firstItem="0JK-ox-DmL" firstAttribute="top" secondItem="Sxg-Hf-V7N" secondAttribute="bottom" id="Znn-T4-JvC"/>
+                            <constraint firstItem="Ham-Eh-Fap" firstAttribute="top" secondItem="0JK-ox-DmL" secondAttribute="bottom" id="bqJ-4z-or9"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="0JK-ox-DmL" secondAttribute="trailing" constant="-20" id="nb5-r6-HE7"/>
+                            <constraint firstItem="A9c-yO-9vC" firstAttribute="centerX" secondItem="ZxW-1Z-ENf" secondAttribute="centerX" id="yAT-8S-w4g"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapTextField" destination="A9c-yO-9vC" id="Hdg-6h-iZ6"/>
+                        <outlet property="mapView" destination="0JK-ox-DmL" id="rgt-GP-Yb0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i4g-F0-6a0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2053" y="205"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">

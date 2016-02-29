@@ -18,6 +18,7 @@ class DetailViewController: UIViewController, SFSafariViewControllerDelegate, UI
     @IBOutlet weak var webpageTextField: UITextField!
     let imagePicker = UIImagePickerController()
     var college : College!
+    var location = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +29,7 @@ class DetailViewController: UIViewController, SFSafariViewControllerDelegate, UI
         populationTextField.text = String(college.population)
         imageView.image = college.image
         webpageTextField.text = college.webpage
+        location = college.name
         
     }
     
@@ -81,4 +83,10 @@ class DetailViewController: UIViewController, SFSafariViewControllerDelegate, UI
         presentViewController(imagePicker, animated: true, completion: nil)
    
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
+    {
+        let dvc = segue.destinationViewController as! MapViewController
+        dvc.location = self.location    }
+
     }
